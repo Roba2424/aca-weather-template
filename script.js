@@ -50,7 +50,7 @@ function showPosition(position) {
 }
 
 function searchCity() {
-  const city = document.getElementById("cityInput").value;
+  let city = document.getElementById("cityInput").value;
   if (city === "") {
     alert("Please enter a city");
     return;
@@ -73,9 +73,12 @@ function searchCity() {
       document.getElementById(
         "temperature"
       ).textContent = `${data.main.temp.toFixed(2)} °C`;
+
+      document.getElementById("cityInput").value = "";
     })
     .catch((error) => {
-      console.error("Error fetching the weather data:", error);
+      document.getElementById("cityInput").value = "";
+      alert("City not found");
     });
 }
 
