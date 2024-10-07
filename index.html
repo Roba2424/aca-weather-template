@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-bar">
+        <input type="text" placeholder="Enter city" id="cityInput" />
+        <button type="button" onclick="searchCity()">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="city-and-country">
+        <div class="card">
+          <i class="fa fa-location-arrow" aria-hidden="true"></i>
+          <h2 id="city" class="text-center">Dubai</h2>
+          <span class="label">City</span>
+        </div>
+        <div class="card">
+          <i class="fa-regular fa-flag"></i>
+          <h2 id="country" class="text-center">AE</h2>
+          <span class="label">Country</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="card temperature-card">
+          <div class="justify-between align-center">
+            <i class="fa fa-thermometer-empty" aria-hidden="true"></i>
+            <img
+              id="weather-icon"
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+            />
+          </div>
+          <h2 id="temperature" class="text-center">33.77°C</h2>
+          <span class="label">Temperature</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
